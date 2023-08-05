@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #212121;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 70px;
+}
+
+.navigation ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.navigation ul li:not(:nth-child(2)):hover a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px;
+  color: #2c5632;
+}
+
+.navigation ul li:not(:nth-child(2)):hover a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px;
+  color: #2c5632;
+}
+
+
+.navigation ul li:hover {
+  background: #2c5632;
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.navigation ul li:nth-child(1):hover {
+  background: transparent;
+}
+.navigation ul li:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.navigation ul li:nth-child(2):hover {
+  background: transparent;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #212121;
+}
+
+.navigation ul li a .icon {
+  color: #0F9347;
+  position: relative;
+  display: block;
+  min-width: 30px;
+  height: 30px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+  color: #fff;
+  font-size: 64px;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+  color: white;
+}
+
+.main {
+  position: absolute;
+  width: calc(100% - 250px);
+  left: 250px;
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+
+.main .topbar {
+  width: 100%;
+  background: #212121;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: '\f0c9';
+  font-family: fontAwesome;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  font-size: 24px;
+  text-align: center;
+  color: #0F9347;
+}
+
+div.content {
+  padding: 1px 20px;
+  height: 100%;
+  min-height: 100vh;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.return-button {
+  background-color: #0F9347;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
